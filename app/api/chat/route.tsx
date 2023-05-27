@@ -19,15 +19,10 @@ export async function POST(req: NextRequest) {
 
     const { key, chatModel, PROMPT, a, u } = data
 
-
     const userList = JSON.parse((u as string) || "[]")
     const assistantList = JSON.parse((a as string) || "[]")
 
-    const formatted = formatMessages(
-      userList,
-      assistantList,
-      PROMPT as string
-    )
+    const formatted = formatMessages(userList, assistantList, PROMPT as string)
 
     const streaming = req.headers.get("accept") === "text/event-stream"
     if (streaming) {

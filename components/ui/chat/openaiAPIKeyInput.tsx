@@ -6,9 +6,8 @@ import clsx from "clsx"
 import { Input } from "@/components/ui/input"
 
 //@ts-ignore
-export function OpenAIAPIKeyInput({oaiKey, setOaiKey}) {
-
-  const [inputOaiKey, setInputOaiKey] = useState(""); // local state to handle user input
+export function OpenAIAPIKeyInput({ oaiKey, setOaiKey }) {
+  const [inputOaiKey, setInputOaiKey] = useState("") // local state to handle user input
   const [oaiKeyFocus, setOaiKeyFocus] = useState(false) // New state to track if the input is focused
   const [oaiKeyValueDisplayed, setOaiKeyValueDisplayed] = useState("") // New state to hold the displayed value
   const [isKeyValid, setIsKeyValid] = useState(false) // New state variable to track if the key is valid
@@ -49,20 +48,20 @@ export function OpenAIAPIKeyInput({oaiKey, setOaiKey}) {
   )
 
   return (
-        <div className="mt-[25px] mb-[-50px]">
-          <label className="-mb-5 ml-[-110px] flex items-center justify-center font-bold  md:ml-[-190px]">
-            OpenAI API Key:
-          </label>
-          <Input
-            type="text"
-            id="oaikey"
-            placeholder="Enter Key Here."
-            className={oaiKeyClassName}
-            value={oaiKeyValueDisplayed}
-            onChange={(e) => setInputOaiKey(e.target.value)}
-            onFocus={() => setOaiKeyFocus(true)}
-            onBlur={() => setOaiKeyFocus(false)}
-          />
-        </div>
+    <div className="mb-[-50px] mt-[25px]">
+      <label className="-mb-5 ml-[-110px] flex items-center justify-center font-bold  md:ml-[-190px]">
+        OpenAI API Key:
+      </label>
+      <Input
+        type="text"
+        id="oaikey"
+        placeholder="Enter Key Here."
+        className={oaiKeyClassName}
+        value={oaiKeyValueDisplayed}
+        onChange={(e) => setInputOaiKey(e.target.value)}
+        onFocus={() => setOaiKeyFocus(true)}
+        onBlur={() => setOaiKeyFocus(false)}
+      />
+    </div>
   )
 }
