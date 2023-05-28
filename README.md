@@ -4,11 +4,37 @@ The motivation behind this project was a perceived complexity in existing templa
 
 ## Installation
 
-Clone this repo via git to use the components.
+1. Clone this repo via git to use the components.
 
 ```bash
 git clone https://github.com/JohnRSandoval/NEXT.JS-LangChain-Starter-Kit.git
 ```
+
+2. Navigate to the cloned folder.
+
+```bash
+cd NEXT.JS-LangChain-Starter-Kit
+```
+
+3. Use your preferred package manager to install packages.
+
+```bash
+npm i
+```
+
+## Run Development
+
+```bash
+npm run dev
+```
+
+## Fix TailWind Issues
+
+```bash
+npx prettier --write .
+```
+
+
 
 ## Usage
 
@@ -60,4 +86,4 @@ Since this projects goal is to help each other learn langchain and next.js, feel
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](https://choosealicense.com/licenses/mit/) 
