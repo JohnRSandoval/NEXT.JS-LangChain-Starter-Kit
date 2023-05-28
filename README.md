@@ -38,7 +38,8 @@ npx prettier --write .
 
 ## Usage
 
-* chatBox.tsx - Ready to go out the box.
+## chatBox.tsx 
+Ready to go out the box. We **recommended** using and changing the UI elements in this component as this has everything working together.
 ```typescript
 import { ChatBox } from "@/components/ui/chat/chatBox"
 
@@ -52,7 +53,8 @@ export default function Home() {
   )
 }
 ```
-* assistantChat.tsx - Is a card-like component that takes a text prop and returns the card with the text.
+## assistantChat.tsx
+Card-like component that takes a text prop and returns the card with the text.
 ```typescript
 import { AssistantChatCard} from "@/components/ui/chat/assistantChat"
 
@@ -66,7 +68,8 @@ export default function Home() {
   )
 }
 ```
-* userChat.tsx - Is a card-like component that takes a text prop and returns the card with the text.
+## userChat.tsx
+Card-like component that takes a text prop and returns the card with the text.
 ```typescript
 import { UserChatCard} from "@/components/ui/chat/userChat"
 
@@ -75,6 +78,60 @@ export default function Home() {
     <section>
       <div className="flex items-center justify-center">
         <UserChatCard text="hi" />
+      </div>
+    </section>
+  )
+}
+```
+
+## openAPIKeyInput.tsx
+Input compenent, uses "useKeyValidation.tsx" to validate if the user's API key exists.
+```typescript
+import { OpenAIAPIKeyInput } from "./openaiAPIKeyInput"
+
+export default function Home() {
+  return (
+    <section>
+      <div className="flex items-center justify-center">
+       <OpenAIAPIKeyInput oaiKey={oaiKey} setOaiKey={setOaiKey} />
+      </div>
+    </section>
+  )
+}
+```
+## messageInput.tsx
+Input compenent, that takes in user input for the chat, can be disabled or loading with props to control different actions.
+```typescript
+import { MessageInput } from "./MessageInput"
+
+export default function Home() {
+  return (
+    <section>
+      <div className="flex items-center justify-center">
+        <MessageInput
+          isDisabled={isDisabled}
+          isLoading={isLoading}
+          inputText={inputText}
+          handleKeyDown={handleKeyDown}
+          handleSendMessage={handleSendMessage}
+          setInputText={setInputText}
+        />
+      </div>
+    </section>
+  )
+}
+```
+## ChatWindow.tsx
+Scroll area conponent, used to house the chat elements and enable chat scrolling.
+```typescript
+import { ChatWindow } from "./ChatWindow"
+     
+
+export default function Home() {
+  return (
+    <section>
+      <div className="flex items-center justify-center">
+        <ChatWindow messages={messages} scrollAreaRef={scrollAreaRef} />
       </div>
     </section>
   )

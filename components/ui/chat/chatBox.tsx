@@ -4,6 +4,7 @@ import { OpenAIAPIKeyInput } from "./openaiAPIKeyInput"
 import { ChatWindow } from "./ChatWindow"
 import { MessageInput } from "./MessageInput"
 import { useCallback, useState, useRef, useEffect } from "react"
+//@ts-ignore
 import { fetchEventSource } from "@microsoft/fetch-event-source"
 
 export function ChatBox() {
