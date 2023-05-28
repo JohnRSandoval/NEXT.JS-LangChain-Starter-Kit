@@ -92,7 +92,7 @@ export default function Home() {
 ```
 
 ## openAPIKeyInput.tsx
-Input compenent, uses "useKeyValidation.tsx" to validate if the user's API key exists.
+Input compenent, uses /api/test_api to verify if the key is valid.
 ```typescript
 import { OpenAIAPIKeyInput } from "./openaiAPIKeyInput"
 
