@@ -2,6 +2,11 @@
 
 The motivation behind this project was a perceived complexity in existing templates and starter kits for langchain chatbots. With a desire for simplicity, I've constructed this kit as an antidote to that complexity! This project serves as a foundation or a source of inspiration for your own endeavors.
 
+## Images
+![Image of chatbot](https://i.imgur.com/5RHXcQj.jpg)
+![Image of chatbot](https://i.imgur.com/B0sJyiG.jpg)
+
+
 ## Installation
 
 1. Clone this repo via git to use the components.
